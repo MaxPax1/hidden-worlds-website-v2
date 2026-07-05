@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero 3 — The hearsay</title>
+<link rel="icon" href="../assets/hw-mark-ink.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; } html, body{ margin: 0; }
+  body{ font-family: 'Newsreader', Georgia, serif; background: #081633; color: #FBF7EE; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .btn{
+    display: inline-flex; align-items: center; gap: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600; font-size: 16px; color: #E4C36A; background: transparent;
+    border: 1.5px solid rgba(228,195,106,0.65); padding: 17px 36px; border-radius: 999px;
+    text-decoration: none; transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease;
+  }
+  .btn:hover{ background: #E4C36A; color: #14233F; transform: translateY(-2px); }
+  nav{ position: absolute; top: 0; left: 0; right: 0; z-index: 5; }
+  .nav-in{ max-width: 1180px; margin: 0 auto; padding: 0 40px; height: 76px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-in img{ height: 30px; }
+  .nav-in .mini{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 13px;
+    color: #FBF7EE; text-decoration: none; border: 1px solid rgba(251,247,238,0.35); padding: 11px 20px; border-radius: 999px;
+  }
+  .hero{
+    position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; overflow: hidden;
+    background: #081633 radial-gradient(100% 85% at 50% 0%, rgba(38,58,110,0.5), rgba(8,22,51,0) 62%);
+  }
+  .in{ position: relative; z-index: 2; max-width: 940px; padding: 140px 40px 120px; }
+  .eyebrow{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.42em; text-transform: uppercase; color: #8E9BB9; margin: 0 0 34px; }
+  .rule{ width: 64px; border-top: 1px solid rgba(228,195,106,0.55); margin: 0 auto 34px; }
+  h1{ font-weight: 500; letter-spacing: -0.02em; margin: 0; font-size: clamp(52px, 6.8vw, 104px); line-height: 1.02; color: #FBF7EE; }
+  h1 em{ font-style: italic; color: #E4C36A; }
+  .lede{ font-size: clamp(20px, 2vw, 25px); line-height: 1.6; color: #AEB9D2; margin: 34px auto 0; max-width: 44ch; }
+  .cta{ display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 46px; }
+  .note{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13.5px; font-weight: 600; color: #8E9BB9; }
+  .switch{
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 50;
+    display: flex; align-items: center; gap: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600;
+    background: rgba(251,247,238,0.95); color: #14233F; border: 1px solid rgba(20,35,63,0.15);
+    padding: 10px 16px; border-radius: 999px; box-shadow: 0 16px 36px -12px rgba(4,10,26,0.6);
+  }
+  .switch a{ color: #A07E2C; text-decoration: none; padding: 2px 6px; }
+  .switch a:hover{ color: #14233F; }
+  @media (max-width: 800px){ .in{ padding: 130px 24px 130px; } .nav-in{ padding: 0 24px; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <img src="../assets/hw-mark-white.png" alt="Hidden Worlds">
+    <a class="mini" href="https://wa.me/385998427803" target="_blank" rel="noopener">Open WhatsApp</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="in">
+    <p class="eyebrow">Dubrovnik</p>
+    <div class="rule"></div>
+    <h1>You've heard<br>it's <em>beautiful</em></h1>
+    <p class="lede">It is. This is about everything else. The layer the postcards skip, from the people who live it. Free, on WhatsApp.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/385998427803" target="_blank" rel="noopener">Show me</a>
+      <span class="note">No app &middot; No sign-up</span>
+    </div>
+  </div>
+</section>
+<div class="switch">
+  <a href="hero-2.html" aria-label="Previous">&larr;</a>
+  <span>3 / 6 &middot; The hearsay</span>
+  <a href="hero-4.html" aria-label="Next">&rarr;</a>
+  <a href="index.html">All</a>
+</div>
+<script>
+document.addEventListener('keydown', function(e){
+  if (e.key === 'ArrowRight') location.href = 'hero-4.html';
+  if (e.key === 'ArrowLeft') location.href = 'hero-2.html';
+});
+</script>
+</body>
+</html>

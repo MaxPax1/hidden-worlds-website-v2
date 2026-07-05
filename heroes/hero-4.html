@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero 4 — The friend</title>
+<link rel="icon" href="../assets/hw-mark-ink.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; } html, body{ margin: 0; }
+  body{ font-family: 'Newsreader', Georgia, serif; background: #FBF7EE; color: #14233F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .btn{
+    display: inline-flex; align-items: center; gap: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600; font-size: 16px; color: #fff; background: #008069;
+    border: 1px solid rgba(255,255,255,0.2); padding: 18px 36px; border-radius: 999px;
+    text-decoration: none; box-shadow: 0 20px 40px -16px rgba(0,96,79,0.55), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+  }
+  .btn:hover{ background: #00947A; transform: translateY(-2px); }
+  .btn svg{ flex: none; }
+  nav{ position: absolute; top: 0; left: 0; right: 0; z-index: 5; border-bottom: 1px solid rgba(20,35,63,0.08); }
+  .nav-in{ max-width: 1180px; margin: 0 auto; padding: 0 40px; height: 76px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-in img{ height: 30px; }
+  .nav-in .mini{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 13px;
+    color: #FBF7EE; text-decoration: none; background: #0A1F4B; padding: 11px 20px; border-radius: 999px;
+  }
+  .hero{ position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;
+    background: linear-gradient(168deg, #FBF7EE 20%, #F1EAD6 100%); }
+  .glow{ position: absolute; inset: 0; background: radial-gradient(55% 60% at 78% 45%, rgba(0,128,105,0.09), rgba(0,128,105,0) 70%); pointer-events: none; }
+  .in{ position: relative; z-index: 2; width: 100%; max-width: 1180px; margin: 0 auto; padding: 130px 40px 100px;
+    display: grid; grid-template-columns: minmax(0, 10fr) minmax(0, 9fr); gap: 64px; align-items: center; }
+  .eyebrow{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #A07E2C; margin: 0 0 20px; display: inline-flex; align-items: center; gap: 9px; }
+  .eyebrow .dot{ width: 7px; height: 7px; border-radius: 50%; background: #00947A; box-shadow: 0 0 0 3px rgba(0,148,122,0.2); }
+  h1{ font-weight: 600; letter-spacing: -0.022em; margin: 0; font-size: clamp(46px, 5.6vw, 84px); line-height: 1.0; max-width: 13ch; }
+  h1 .accent{ color: #A07E2C; }
+  .lede{ font-size: clamp(19px, 1.9vw, 23px); line-height: 1.6; color: #46536B; margin: 26px 0 0; max-width: 44ch; }
+  .cta{ display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 36px; }
+  .note{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; color: #46536B; }
+  .chat{ display: flex; flex-direction: column; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  .bubble{
+    max-width: 78%; font-size: 16.5px; line-height: 1.45; color: #111B21;
+    padding: 13px 17px; border-radius: 16px;
+    box-shadow: 0 14px 30px -14px rgba(20,35,63,0.35);
+  }
+  .bubble.q{ align-self: flex-end; background: #D9FDD3; border-top-right-radius: 4px; transform: rotate(0.6deg); }
+  .bubble.a{ align-self: flex-start; background: #FFFFFF; border-top-left-radius: 4px; transform: rotate(-0.6deg); }
+  .bubble .meta{ display: block; margin-top: 6px; font-size: 11px; color: #667781; text-align: right; }
+  .bubble .meta .ticks{ color: #53BDEB; letter-spacing: -2px; }
+  .chat .from{
+    align-self: flex-start; display: flex; align-items: center; gap: 9px; margin-top: 4px;
+    font-size: 12.5px; font-weight: 600; color: #6B7890;
+  }
+  .chat .from img{ width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+  .switch{
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 50;
+    display: flex; align-items: center; gap: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600;
+    background: rgba(20,35,63,0.92); color: #FBF7EE; border: 1px solid rgba(251,247,238,0.15);
+    padding: 10px 16px; border-radius: 999px; box-shadow: 0 16px 36px -12px rgba(4,10,26,0.5);
+  }
+  .switch a{ color: #E4C36A; text-decoration: none; padding: 2px 6px; }
+  .switch a:hover{ color: #fff; }
+  @media (max-width: 880px){
+    .in{ grid-template-columns: 1fr; gap: 52px; padding: 118px 24px 130px; }
+    .nav-in{ padding: 0 24px; }
+    .bubble{ max-width: 88%; font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <img src="../assets/hw-mark-ink.png" alt="Hidden Worlds">
+    <a class="mini" href="https://wa.me/385998427803" target="_blank" rel="noopener">Open WhatsApp</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="glow"></div>
+  <div class="in">
+    <div>
+      <p class="eyebrow"><span class="dot"></span>Live now in Dubrovnik</p>
+      <h1>The friend you <span class="accent">wish you had</span> here</h1>
+      <p class="lede">He texts you where the locals actually eat, what's worth it, what to skip, and the story under the stones. Free, on WhatsApp.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/385998427803" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.358.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.358 11.944-11.893a11.821 11.821 0 00-3.487-8.453z"/></svg>
+          Say hi
+        </a>
+        <span class="note">Free &middot; No app &middot; No sign-up</span>
+      </div>
+    </div>
+    <div class="chat">
+      <div class="bubble q">Landing in an hour. Is the cable car worth it?<span class="meta">14:02 <span class="ticks">&#10003;&#10003;</span></span></div>
+      <div class="bubble a">Skip the ticket line, walk up. Same view, no crowd, and the sunset from the top is yours.<span class="meta">14:03</span></div>
+      <div class="bubble q">And where do locals actually eat?<span class="meta">14:03 <span class="ticks">&#10003;&#10003;</span></span></div>
+      <div class="bubble a">Not on the main street. There's a konoba two alleys behind the cathedral. I'll point you there when you land.<span class="meta">14:04</span></div>
+      <div class="from"><img src="../assets/hw-whatsapp-avatar.jpg" alt="">Your guide &middot; replies in seconds</div>
+    </div>
+  </div>
+</section>
+<div class="switch">
+  <a href="hero-3.html" aria-label="Previous">&larr;</a>
+  <span>4 / 6 &middot; The friend</span>
+  <a href="hero-5.html" aria-label="Next">&rarr;</a>
+  <a href="index.html">All</a>
+</div>
+<script>
+document.addEventListener('keydown', function(e){
+  if (e.key === 'ArrowRight') location.href = 'hero-5.html';
+  if (e.key === 'ArrowLeft') location.href = 'hero-3.html';
+});
+</script>
+</body>
+</html>
