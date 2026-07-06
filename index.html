@@ -236,18 +236,12 @@
   }
   .frame:hover{ transform: translateY(-5px); box-shadow: 0 2px 0 rgba(20,35,63,0.03), 0 42px 72px -28px rgba(20,35,63,0.5); }
   .frame img{ width: 100%; height: auto; }
-  .chapter-row{
-    margin-top: 56px; padding-top: 44px; border-top: 1px solid var(--hairline);
-    display: flex; align-items: baseline; justify-content: center; gap: 18px 44px; flex-wrap: wrap;
-  }
-  .chapter-row .now{
-    font-family: var(--serif); font-weight: 600; font-size: clamp(24px, 2.4vw, 32px); color: var(--ink);
-    display: inline-flex; align-items: center; gap: 13px;
-  }
-  .chapter-row .now .dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--gold-ink); box-shadow: 0 0 0 4px rgba(201,168,76,0.25); }
-  .chapter-row .now small{ font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: var(--gold-ink); text-transform: uppercase; }
-  .chapter-row .next{
-    font-family: var(--serif); font-size: clamp(19px, 1.9vw, 24px); color: #A8B0C0; font-style: italic;
+  .edition{
+    width: fit-content; margin: 26px auto 0;
+    display: flex; flex-direction: column; gap: 7px; text-align: center;
+    border: 1px solid rgba(228,195,106,0.45); padding: 15px 26px;
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft);
   }
 
   /* ── how it works ─────────────────────────── */
@@ -354,7 +348,6 @@
     .nav-in{ grid-template-columns: 1fr auto; height: 68px; }
     .btn--nav{ min-height: 44px; }
     .phone{ transform: none; }
-    .chapter-row{ margin-top: 48px; flex-direction: column; align-items: center; gap: 14px; }
     .cards-pair .front{ width: clamp(180px, 42vw, 240px); }
     .cards-pair .back{ width: clamp(164px, 38vw, 220px); }
   }
@@ -501,18 +494,18 @@
         </div>
         <div class="step rv d2">
           <div class="num">02</div>
-          <h3>Take the morning briefing</h3>
-          <p>The story, the word, where to go, what to skip. Three minutes.</p>
+          <h3>Take the morning challenge</h3>
+          <p>Every morning your guide sets you one, three minutes long. Do it, and the place starts making sense.</p>
         </div>
         <div class="step rv d3">
           <div class="num">03</div>
           <h3>Go live your trip</h3>
-          <p>He's one message away when you want him. Silent when you don't.</p>
+          <p>He's with you the whole way. Whatever comes up, an answer is seconds away.</p>
         </div>
         <div class="step rv d3">
           <div class="num">04</div>
-          <h3>Take the story home</h3>
-          <p>If a moment mattered, keep it on a painted card.</p>
+          <h3>Store your story</h3>
+          <p>The moments that mattered go on your Story Card, and come home with you.</p>
         </div>
       </div>
       <div class="cta-stack rv" style="margin-top: 64px;">
@@ -531,11 +524,15 @@
       <div class="cols">
         <div class="txt">
           <h2 class="rv">If a moment mattered, take it home</h2>
-          <p class="lede rv d1" style="margin-top: 26px;">A painted card that holds the story you walked into. It sits on your shelf, and every time someone asks where you've been, you get to tell it.</p>
-          <p class="lede rv d2" style="margin-top: 18px;">Yours alone: the story on the front, a code on the back that keeps every story from your trip.</p>
+          <p class="lede rv d1" style="margin-top: 26px;">A small painted card with the story you walked into on the front, and a code on the back that keeps every story from your trip.</p>
+          <p class="lede rv d2" style="margin-top: 18px;">It sits on your shelf, someone asks, and you get to tell it.</p>
         </div>
         <div class="art rv d1">
           <div class="frame"><img src="assets/card-shelf.jpg" alt="A Hidden Worlds Story Card displayed on a shelf between books"></div>
+          <div class="edition rv d2">
+            <span>First series &middot; Season I &middot; Dubrovnik</span>
+            <span>One of 1,000 &middot; each numbered</span>
+          </div>
         </div>
       </div>
     </div>
@@ -544,14 +541,9 @@
   <!-- ─────────── 7 · ONE CITY AT A TIME ─────────── -->
   <section class="chapters">
     <div class="chapters-in">
-      <h2 class="rv">One city at a time</h2>
-      <p class="lede rv d1">Any city can be the one you come back bigger from. We'd rather open one properly than list fifty.</p>
-      <div class="chapter-row rv">
-        <span class="now"><span class="dot"></span>Chapter I &middot; Dubrovnik&nbsp;<small>Live now</small></span>
-        <span class="next">next: London &middot; Frankfurt &middot; Malta</span>
-      </div>
-      <div class="cta-stack rv d2" style="align-items: center; margin-top: 52px;">
-        <a class="btn btn--ghost" href="https://wa.me/385998427803?text=Which%20city%20should%20Hidden%20Worlds%20open%20next%3F" target="_blank" rel="noopener">Tell us which city to open next</a>
+      <h2 class="rv">Making trips count, one city at a time</h2>
+      <div class="cta-stack rv d1" style="align-items: center; margin-top: 44px;">
+        <a class="btn" href="https://wa.me/385998427803?text=Which%20city%20should%20Hidden%20Worlds%20open%20next%3F" target="_blank" rel="noopener">Request the next city</a>
         <p class="fine">We'll let you know the moment it goes live.</p>
       </div>
     </div>
