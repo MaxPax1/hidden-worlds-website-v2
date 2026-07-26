@@ -141,6 +141,21 @@
     max-width: 1180px; margin: 0 auto; padding: 160px 40px 76px;
   }
   .hero h1{ color: #FBF7EE; max-width: 13ch; text-shadow: 0 2px 6px rgba(4,10,26,0.45), 0 6px 34px rgba(4,10,26,0.6); }
+  .hero h1.alt{ font-size: clamp(38px, 4.8vw, 70px); max-width: 18ch; line-height: 1.06; }
+
+  /* ── hero A/B toggle (preview tool) ── */
+  .ab{
+    position: fixed; right: 18px; bottom: 18px; z-index: 60;
+    display: flex; align-items: center; gap: 2px; padding: 3px;
+    background: rgba(10,31,75,0.85); border: 1px solid rgba(251,247,238,0.25);
+    border-radius: 999px; backdrop-filter: blur(6px);
+    font-family: var(--sans); font-size: 12.5px; font-weight: 600;
+  }
+  .ab button{
+    appearance: none; border: 0; background: transparent; cursor: pointer;
+    color: rgba(251,247,238,0.65); font: inherit; padding: 6px 13px; border-radius: 999px;
+  }
+  .ab button.on{ background: #FBF7EE; color: var(--navy); }
   .hero .lede{ color: rgba(251,247,238,0.88); max-width: 46ch; margin-top: 24px; text-shadow: 0 1px 18px rgba(4,10,26,0.5); }
   .hero .cta-stack{ margin-top: 38px; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 20px; }
   .hero .cta-note{ color: rgba(251,247,238,0.85); text-shadow: 0 1px 12px rgba(4,10,26,0.5); }
@@ -588,6 +603,11 @@
   </div>
 </div>
 
+<div class="ab" role="group" aria-label="Hero headline toggle">
+  <button type="button" data-hero="a" class="on">Show up</button>
+  <button type="button" data-hero="b">Wrong place</button>
+</div>
+
 <script>
 (function () {
   var TERMS_URL = 'https://hiddenworlds.travel/terms';
@@ -647,6 +667,26 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Hero A/B toggle (preview tool): swap the headline, remember the pick
+  var HEROES = {
+    a: { html: "Don't just show up", alt: false },
+    b: { html: "There's no wrong place. Only the wrong way to experience it.", alt: true }
+  };
+  var h1 = document.querySelector('.hero h1');
+  var abBtns = document.querySelectorAll('.ab button');
+  function setHero(k){
+    h1.innerHTML = HEROES[k].html;
+    h1.classList.toggle('alt', HEROES[k].alt);
+    abBtns.forEach(function (b) { b.classList.toggle('on', b.dataset.hero === k); });
+    try { localStorage.setItem('hw-hero', k); } catch (e) {}
+  }
+  abBtns.forEach(function (b) {
+    b.addEventListener('click', function () { setHero(b.dataset.hero); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('hw-hero'); } catch (e) {}
+  if (saved === 'b'){ setHero('b'); }
 
   // Scroll reveal
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
