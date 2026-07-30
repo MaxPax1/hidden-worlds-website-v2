@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hidden Worlds — Don't just show up</title>
+<title>Hidden Worlds — The right guide changes the whole trip</title>
 <meta name="description" content="A free guide to Dubrovnik on WhatsApp, from someone who landed here a stranger and never left. No app, no sign-up, and the advice is never for sale.">
-<meta property="og:title" content="Hidden Worlds — Don't just show up">
+<meta property="og:title" content="Hidden Worlds — The right guide changes the whole trip">
 <meta property="og:description" content="A free guide to Dubrovnik on WhatsApp. No app, no sign-up, and the advice is never for sale.">
 <meta property="og:image" content="assets/hero-aerial.jpg">
 <meta property="og:type" content="website">
@@ -140,22 +140,11 @@
     position: relative; z-index: 2; width: 100%;
     max-width: 1180px; margin: 0 auto; padding: 160px 40px 76px;
   }
-  .hero h1{ color: #FBF7EE; max-width: 13ch; text-shadow: 0 2px 6px rgba(4,10,26,0.45), 0 6px 34px rgba(4,10,26,0.6); }
-  .hero h1.alt{ font-size: clamp(38px, 4.8vw, 70px); max-width: 18ch; line-height: 1.06; }
-
-  /* ── hero A/B toggle (preview tool) ── */
-  .ab{
-    position: fixed; right: 18px; bottom: 18px; z-index: 60;
-    display: flex; align-items: center; gap: 2px; padding: 3px;
-    background: rgba(10,31,75,0.85); border: 1px solid rgba(251,247,238,0.25);
-    border-radius: 999px; backdrop-filter: blur(6px);
-    font-family: var(--sans); font-size: 12.5px; font-weight: 600;
+  .hero h1{
+    color: #FBF7EE; max-width: 21ch;
+    font-size: clamp(42px, 5.4vw, 78px); line-height: 1.02;
+    text-shadow: 0 2px 6px rgba(4,10,26,0.45), 0 6px 34px rgba(4,10,26,0.6);
   }
-  .ab button{
-    appearance: none; border: 0; background: transparent; cursor: pointer;
-    color: rgba(251,247,238,0.65); font: inherit; padding: 6px 13px; border-radius: 999px;
-  }
-  .ab button.on{ background: #FBF7EE; color: var(--navy); }
   .hero .lede{ color: rgba(251,247,238,0.88); max-width: 46ch; margin-top: 24px; text-shadow: 0 1px 18px rgba(4,10,26,0.5); }
   .hero .cta-stack{ margin-top: 38px; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 20px; }
   .hero .cta-note{ color: rgba(251,247,238,0.85); text-shadow: 0 1px 12px rgba(4,10,26,0.5); }
@@ -353,6 +342,12 @@
     .wrap, .nav-in, .hero-in, .foot-in, .chapters-in{ padding-left: 24px; padding-right: 24px; }
     .hero{ min-height: max(78vh, 560px); }
     .hero-in{ padding-top: 130px; padding-bottom: 56px; }
+    /* the headline + lede sit over the bright rooftops on narrow screens */
+    .hero .veil{
+      background:
+        linear-gradient(180deg, rgba(8,16,36,0.6) 0%, rgba(8,16,36,0.34) 34%, rgba(7,17,40,0.52) 58%, rgba(7,16,38,0.95) 100%),
+        radial-gradient(115% 78% at 20% 92%, rgba(6,14,34,0.74), rgba(6,14,34,0) 64%);
+    }
     .hero .cta-stack{ flex-direction: column; align-items: flex-start; gap: 14px; }
     .cols{ grid-template-columns: 1fr; gap: 58px; }
     .cols .art{ order: 0; }
@@ -381,7 +376,7 @@
     <div class="nav-cta-slot">
       <a class="btn btn--nav" data-wa-confirm href="https://wa.me/385998427803" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.358.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.358 11.944-11.893a11.821 11.821 0 00-3.487-8.453z"/></svg>
-        Claim your guide
+        Add me on WhatsApp
       </a>
     </div>
   </div>
@@ -394,12 +389,12 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="veil" aria-hidden="true"></div>
     <div class="hero-in">
-      <h1 class="rv in d1">Don't just show up</h1>
-      <p class="lede rv in d2">The stories you walk into, the things you dare, the places you'd never have found. On WhatsApp, from the moment you land.</p>
+      <h1 class="rv in d1">The right guide changes the whole trip</h1>
+      <p class="lede rv in d2">Where the locals eat, what's worth your time, what to skip, and the stories behind all of it. Ask anything on WhatsApp, from the moment you land.</p>
       <div class="cta-stack rv in d3">
         <a class="btn" href="https://wa.me/385998427803" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.358.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.358 11.944-11.893a11.821 11.821 0 00-3.487-8.453z"/></svg>
-          Claim your guide
+          Add me on WhatsApp
         </a>
         <span class="cta-note">Free. No app. No sign-up.</span>
         <p class="fine">By continuing, you agree to the <a href="https://hiddenworlds.travel/terms#terms" data-tc="terms">Terms of Service</a> and <a href="https://hiddenworlds.travel/terms#privacy" data-tc="privacy">Privacy Policy</a></p>
@@ -526,7 +521,7 @@
       <div class="cta-stack rv" style="margin-top: 64px;">
         <a class="btn" href="https://wa.me/385998427803" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.358.101 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.582 0 11.94-5.358 11.944-11.893a11.821 11.821 0 00-3.487-8.453z"/></svg>
-          Claim your guide
+          Add me on WhatsApp
         </a>
         <p class="fine">By continuing, you agree to the <a href="https://hiddenworlds.travel/terms#terms" data-tc="terms">Terms of Service</a> and <a href="https://hiddenworlds.travel/terms#privacy" data-tc="privacy">Privacy Policy</a></p>
       </div>
@@ -603,11 +598,6 @@
   </div>
 </div>
 
-<div class="ab" role="group" aria-label="Hero headline toggle">
-  <button type="button" data-hero="a" class="on">Show up</button>
-  <button type="button" data-hero="b">Wrong place</button>
-</div>
-
 <script>
 (function () {
   var TERMS_URL = 'https://hiddenworlds.travel/terms';
@@ -667,26 +657,6 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-
-  // Hero A/B toggle (preview tool): swap the headline, remember the pick
-  var HEROES = {
-    a: { html: "Don't just show up", alt: false },
-    b: { html: "There's no wrong place. Only the wrong way to experience it.", alt: true }
-  };
-  var h1 = document.querySelector('.hero h1');
-  var abBtns = document.querySelectorAll('.ab button');
-  function setHero(k){
-    h1.innerHTML = HEROES[k].html;
-    h1.classList.toggle('alt', HEROES[k].alt);
-    abBtns.forEach(function (b) { b.classList.toggle('on', b.dataset.hero === k); });
-    try { localStorage.setItem('hw-hero', k); } catch (e) {}
-  }
-  abBtns.forEach(function (b) {
-    b.addEventListener('click', function () { setHero(b.dataset.hero); });
-  });
-  var saved = null;
-  try { saved = localStorage.getItem('hw-hero'); } catch (e) {}
-  if (saved === 'b'){ setHero('b'); }
 
   // Scroll reveal
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
