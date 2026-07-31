@@ -160,6 +160,16 @@
     padding: 8px 15px; border-radius: 999px; margin-bottom: 22px;
     box-shadow: 0 10px 22px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
   }
+  .seemore{
+    display: inline-flex; align-items: center; gap: 9px; margin-top: 28px;
+    font-family: var(--sans); font-size: 14.5px; font-weight: 600; letter-spacing: 0.02em;
+    color: var(--gold-ink); text-decoration: none;
+    transition: gap 0.2s ease, color 0.2s ease;
+  }
+  .seemore:hover{ gap: 14px; color: var(--ink); }
+  .seemore:focus-visible{ outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 4px; }
+  .night .seemore{ color: var(--gold-soft); }
+  .night .seemore:hover{ color: #F5EFDF; }
   .partner-row{ margin-top: 42px; padding-top: 30px; border-top: 1px solid var(--hairline); }
   .partner-row span{
     font-family: var(--sans); font-size: 11px; font-weight: 700;
@@ -418,7 +428,8 @@
         <div class="txt">
           <span class="badge rv">Live now</span>
           <h2 class="rv">The first hidden world is open: <span class="accent">Dubrovnik</span></h2>
-          <p class="lede rv d1" style="margin-top: 26px;">One city done properly before we add more. Everything we know about it is one message away. The stories you want to keep, you can take home on a card.</p>
+          <p class="lede rv d1" style="margin-top: 26px;">Be among the first to find the Dubrovnik that locals keep to themselves, and take a piece of it home.</p>
+          <a class="seemore rv d2" href="story-card.html">See more <span aria-hidden="true">&rarr;</span></a>
           <div class="partner-row rv d2">
             <span>In partnership with</span>
             <div class="logos">
@@ -547,6 +558,7 @@
           <p class="lede rv d1" style="margin-top: 26px;">A small painted card. The story is on the front. On the back is a code that saves every story from your trip, so you can read them again later.</p>
           <p class="lede rv d2" style="margin-top: 18px;">It sits on your shelf, someone asks, and you get to tell it.</p>
           <p class="card-price rv d2">Twenty euros, and the only thing on this page that costs anything.</p>
+          <a class="seemore rv d2" href="story-card.html">See more <span aria-hidden="true">&rarr;</span></a>
         </div>
         <div class="art rv d1">
           <div class="frame"><img src="assets/card-shelf.jpg" alt="A Hidden Worlds Story Card displayed on a shelf between books"></div>
