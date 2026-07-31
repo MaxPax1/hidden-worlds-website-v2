@@ -250,13 +250,6 @@
   }
   .frame:hover{ transform: translateY(-5px); box-shadow: 0 2px 0 rgba(20,35,63,0.03), 0 42px 72px -28px rgba(20,35,63,0.5); }
   .frame img{ width: 100%; height: auto; }
-  .edition{
-    width: fit-content; margin: 26px auto 0;
-    display: flex; flex-direction: column; gap: 7px; text-align: center;
-    border: 1px solid rgba(228,195,106,0.45); padding: 15px 26px;
-    font-family: var(--sans); font-size: 11px; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft);
-  }
 
   /* ── how it works ─────────────────────────── */
   .steps{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px; margin-top: 66px; }
@@ -274,10 +267,8 @@
   }
   .night h2{ color: #F5EFDF; }
   .night .lede{ color: #B7C2DA; font-size: clamp(19px, 1.9vw, 22px); }
-  .card-price{
-    margin: 20px 0 0; font-family: var(--sans); font-size: 15px;
-    line-height: 1.6; color: #8FA0C0;
-  }
+  /* the card image carries this section, so give it more of the width */
+  .night .cols{ grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); gap: 72px; }
   .cards-pair{ display: flex; justify-content: center; align-items: center; min-width: 0; }
   .cards-pair img{ border-radius: 13px; height: auto; transition: transform 0.35s ease; }
   .cards-pair .front{
@@ -363,7 +354,7 @@
         radial-gradient(115% 78% at 20% 92%, rgba(6,14,34,0.74), rgba(6,14,34,0) 64%);
     }
     .hero .cta-stack{ flex-direction: column; align-items: flex-start; gap: 14px; }
-    .cols{ grid-template-columns: 1fr; gap: 58px; }
+    .cols, .night .cols{ grid-template-columns: 1fr; gap: 58px; }
     .cols .art{ order: 0; }
     .cols .txt{ order: 1; }
     .band{ padding: 84px 0; }
@@ -551,15 +542,10 @@
           <h2 class="rv">If a moment mattered, take it home</h2>
           <p class="lede rv d1" style="margin-top: 26px;">The first Story Card. One of only a thousand.</p>
           <p class="lede rv d2" style="margin-top: 18px;">A story you can hold, and get to tell every time someone asks.</p>
-          <p class="card-price rv d2">Twenty euros, and the only thing on this page that costs anything.</p>
           <a class="seemore rv d2" href="story-card.html">See more <span aria-hidden="true">&rarr;</span></a>
         </div>
         <div class="art rv d1">
           <div class="frame"><img src="assets/card-shelf.jpg" alt="A Hidden Worlds Story Card displayed on a shelf between books"></div>
-          <div class="edition rv d2">
-            <span>First series &middot; Season I &middot; Dubrovnik</span>
-            <span>Each one numbered</span>
-          </div>
         </div>
       </div>
     </div>
