@@ -120,17 +120,9 @@
                       radial-gradient(85% 80% at 88% 112%, rgba(4,10,26,0.55), rgba(10,31,75,0) 70%);
     overflow: hidden;
   }
-  .sc-top-in{ max-width: 1180px; margin: 0 auto; padding: 168px 40px 104px; }
-  .sc-top h1{ color: #F5EFDF; max-width: 20ch; }
-  .sc-top .lede{ color: #B7C2DA; max-width: 46ch; margin-top: 24px; }
-  .sc-back{
-    display: inline-flex; align-items: center; gap: 9px; margin-bottom: 26px;
-    font-family: var(--sans); font-size: 13.5px; font-weight: 600; letter-spacing: 0.02em;
-    color: var(--gold-soft); text-decoration: none;
-    transition: gap 0.2s ease, color 0.2s ease;
-  }
-  .sc-back:hover{ gap: 14px; color: #F5EFDF; }
-  .sc-back:focus-visible{ outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 4px; }
+  .sc-top-in{ max-width: 1180px; margin: 0 auto; padding: 168px 40px 104px; text-align: center; }
+  .sc-top h1{ color: #F5EFDF; max-width: 20ch; margin-inline: auto; }
+  .sc-top .lede{ color: #B7C2DA; max-width: 46ch; margin: 24px auto 0; }
 
   /* ── sections ─────────────────────────────── */
   section{ scroll-margin-top: 80px; }
@@ -180,13 +172,6 @@
   }
   .thousand h2{ margin-top: 18px; }
   .thousand .lede{ margin: 24px auto 0; max-width: 50ch; }
-  .edition{
-    width: fit-content; margin: 34px auto 0;
-    display: flex; flex-direction: column; gap: 7px; text-align: center;
-    border: 1px solid rgba(228,195,106,0.45); padding: 15px 26px;
-    font-family: var(--sans); font-size: 11px; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft);
-  }
 
   /* ── closer ───────────────────────────────── */
   .closer{ text-align: center; }
@@ -286,7 +271,6 @@
   <!-- ─────────── 1 · BANNER ─────────── -->
   <section class="sc-top">
     <div class="sc-top-in">
-      <a class="sc-back rv in" href="index.html"><span aria-hidden="true">&larr;</span> Back</a>
       <h1 class="rv in d1">Season 1 &middot; 2026 &middot; <span style="color: var(--gold-soft);">Dubrovnik</span></h1>
       <p class="lede rv in d2">The first thousand cards. One story each, and the only way to hold one is to have been here.</p>
     </div>
@@ -332,10 +316,6 @@
       <div class="big rv">1,000</div>
       <h2 class="rv d1">One of only a thousand</h2>
       <p class="lede rv d2">Season one, series R2. A thousand cards, each one numbered, printed once and never again. Sold in one place, the duty free at Dubrovnik Airport, so the only way to hold one is to have been here.</p>
-      <div class="edition rv d3">
-        <span>First series &middot; Season I &middot; Dubrovnik</span>
-        <span>One of 1,000 &middot; each numbered &middot; &euro;20</span>
-      </div>
     </div>
   </section>
 
